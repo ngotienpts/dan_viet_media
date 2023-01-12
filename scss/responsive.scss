@@ -1,0 +1,127 @@
+// max width 1280px
+@media (max-width: 80em) {
+  .d-xl-none {
+    display: none;
+  }
+  .d-xl-block {
+    display: block;
+  }
+  .d-xl-flex {
+    display: flex;
+  }
+  .d-xl-grid {
+    display: grid;
+  }
+  /*-------------------------------------------------------------*/
+}
+// max width 1024px
+@media (max-width: 64em) {
+  .d-lg-none {
+    display: none;
+  }
+  .d-lg-block {
+    display: block;
+  }
+  .d-lg-flex {
+    display: flex;
+  }
+  .d-lg-grid {
+    display: grid;
+  }
+  /*-------------------------------------------------------------detail*/
+  .wrapper-detail {
+    margin-top: 56px;
+    padding: 20px;
+    border: none;
+    font-family: "Hind", sans-serif;
+    & .block-left {
+      border-right: none;
+    }
+  }
+  .detail-field {
+    font-family: "Hind", sans-serif;
+    padding: 0;
+    & .cate-header {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    & .detail-title {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    & .detail-info {
+      margin: 0 0 20px;
+    }
+    & .detail-sapo {
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+    }
+    & .detail-content {
+      & p {
+        font-size: 20px;
+        margin-bottom: 24px;
+        line-height: 30px;
+        text-align: justify;
+      }
+      & .author {
+        color: #333;
+        font-size: 20px;
+        padding-bottom: 20px;
+      }
+    }
+
+    & .detail-tags {
+      & .tag-link {
+        color: #0000ff;
+      }
+      & .detail-tags__item {
+        margin: 0 5px 20px 0;
+      }
+    }
+  }
+}
+
+// max width 768px
+@media (max-width: 48em) {
+  .d-md-none {
+    display: none;
+  }
+  .d-md-block {
+    display: block;
+  }
+  .d-md-flex {
+    display: flex;
+  }
+  .d-md-grid {
+    display: grid;
+  }
+}
+
+// max width 640px
+@media (max-width: 40em) {
+  .d-sm-none {
+    display: none;
+  }
+  .d-sm-block {
+    display: block;
+  }
+  .d-sm-flex {
+    display: flex;
+  }
+  .d-sm-grid {
+    display: grid;
+  }
+}
+
+// danh cho man hinh duoi 400px
+@media (max-width: 25em) {
+}
+@media (max-width: 20em) {
+}

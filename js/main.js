@@ -8,11 +8,31 @@ document.addEventListener("DOMContentLoaded", function () {
   // fancybox
   var fancyboxes = document.querySelectorAll(".fancybox-full");
 
+  // navbar
+  var navbar = document.querySelector(".navbar ");
+
   const app = {
     // su ly cac su kien
     handleEvent: function () {
       const _this = this;
+      // navbar
+      if (navbar) {
+        var expan = navbar.querySelector(".navbar-expan");
+        var search = navbar.querySelector(".navbar-search");
 
+        search.onclick = function () {
+          this.classList.toggle("active");
+        };
+
+        expan.onclick = function () {
+          this.classList.toggle("active");
+          if (this.classList.contains("active")) {
+            this.firstElementChild.innerHTML = '<i class="fas fa-times"></i>';
+          } else {
+            this.firstElementChild.innerHTML = '<i class="fas fa-bars"></i>';
+          }
+        };
+      }
       // when click back top
       if (backTop) {
         backTop.onclick = function () {
@@ -25,14 +45,27 @@ document.addEventListener("DOMContentLoaded", function () {
       // document.addEventListener("click", function (e) {});
     },
 
-    // slide box top mb
-    // slideBoxTopMb: function () {
-    //   var swiper = new Swiper(".mySwiperBoxTopMb", {
-    //     pagination: {
-    //       el: ".swiper-pagination",
-    //     },
-    //   });
-    // },
+    // color thief
+    colorThief: function () {
+      // var caretakers =  document.querySelector('.article-caretaker')
+      // var pictureFrames =  document.querySelector('.js-picture-frame')
+      // var colorThief = new ColorThief();
+      // var img = document.getElementById('imag');
+      // // check if img is loaded
+      // if (img && img.naturalWidth) {
+      //   onImageLoad();
+      // } else {
+      //   img.onload = function() {
+      //     onImageLoad();
+      //   };
+      // }
+      // function onImageLoad() {
+      //   URL.revokeObjectURL(image.src);
+      //   var rgb = colorThief.getColor(img);
+      //   document.body.style.backgroundColor = 'rgb(' + rgb.join(', ') + ')';
+      // }
+    },
+
     // sticky bar home 1
     stickyHome1: function () {
       $(".leftSidebar-1,.rightSidebar-1").theiaStickySidebar({
@@ -76,8 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
       this.handleEvent();
       // window scroll
       this.windowScroll();
-      // slide box top mb
-      // this.slideBoxTopMb();
       // sticky bar home 1
       this.stickyHome1();
       // fancybox

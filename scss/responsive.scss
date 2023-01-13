@@ -28,62 +28,182 @@
   .d-lg-grid {
     display: grid;
   }
-  /*-------------------------------------------------------------detail*/
-  .wrapper-detail {
-    margin-top: 56px;
-    padding: 20px;
-    border: none;
-    font-family: "Hind", sans-serif;
-    & .block-left {
-      border-right: none;
+  /*-------------------------------------------------------------index*/
+  .mt-50 {
+    margin-top: 40px;
+  }
+  .header-top {
+    padding: 5px 0;
+
+    & .header-top__list {
+      justify-content: center;
     }
   }
-  .detail-field {
-    font-family: "Hind", sans-serif;
-    padding: 0;
-    & .cate-header {
-      font-size: 15px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      padding-bottom: 0;
-      border-bottom: none;
+
+  .header-logo {
+    padding: 10px 0;
+
+    & img {
+      height: 40px;
+      margin: auto;
+    }
+  }
+
+  .navbar {
+    justify-content: space-between;
+    margin: 0 15px;
+    & .navbar-item {
+      display: none;
     }
 
-    & .detail-title {
-      font-size: 25px;
-      font-weight: bold;
-      margin-bottom: 0;
-    }
+    & .navbar-search {
+      margin-right: 0;
+      order: 2;
 
-    & .detail-info {
-      margin: 0 0 20px;
-    }
-    & .detail-sapo {
-      font-size: 20px;
-      line-height: 30px;
-      text-align: justify;
-    }
-    & .detail-content {
-      & p {
+      & .navbar-search__icon {
         font-size: 20px;
-        margin-bottom: 24px;
-        line-height: 30px;
-        text-align: justify;
       }
-      & .author {
+    }
+
+    & .navbar-expan {
+      margin: 10px 0;
+      background-color: #008837;
+      & .navbar-expan__icon {
+        line-height: 1;
+        padding: 5px;
+        font-size: 20px;
+        color: #fff;
+      }
+
+      & .expand-list {
+        right: auto;
+        left: 0;
+        padding: 0;
+        padding-top: 10px;
+        transform-origin: left top;
+        background-color: #fff;
+        box-shadow: none;
+      }
+      & .expand-item {
+        border-bottom: 1px solid #f1f1f1 !important;
+        &:first-child {
+          border-top: 1px solid #f1f1f1;
+        }
+      }
+      & .expan-link {
+        padding: 10px 0;
+        font-weight: 600;
+        font-size: 14px;
         color: #333;
-        font-size: 20px;
-        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .block-main,
+  .block-top,
+  .block-top .block-small {
+    display: block;
+  }
+  .block-top {
+    padding-left: 15px;
+    padding-right: 15px;
+    & .block-large {
+      margin-bottom: 5px;
+    }
+
+    & .block-small {
+      & .block-articles__item {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .box-header {
+    & .heading {
+      font-size: 11px;
+      padding: 9px 10px;
+    }
+  }
+  .box-primary {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    & .box-container {
+      display: block;
+    }
+    & .box-item {
+      margin-bottom: 15px;
+    }
+  }
+
+  .box-secondary {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    & .box-item {
+      display: block;
+    }
+
+    & .articles-img {
+      width: 100%;
+    }
+
+    & .articles-content {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+
+    & .articles-title {
+      color: #1c1c1c;
+    }
+  }
+
+  .block-right {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .block-images {
+    & .block-images__container {
+      display: block;
+    }
+    & .block-large {
+      & .article-cate {
+        display: inline-block;
+        background-color: #1c1c1c;
       }
     }
 
-    & .detail-tags {
-      & .tag-link {
-        color: #0000ff;
+    & .block-small {
+      & .article-img {
+        width: 35%;
       }
-      & .detail-tags__item {
-        margin: 0 5px 20px 0;
+
+      & .article-content {
+        margin-left: 16px;
       }
+    }
+  }
+
+  .footer-pc {
+    & .footer-top {
+      padding: 30px;
+    }
+
+    & .footer-bot {
+      padding: 15px;
+      & p:first-child {
+        text-align: center;
+      }
+    }
+  }
+  /*-------------------------------------------------------------cate*/
+  .breadcreums-cate {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .block-cate {
+    & .block-right {
+      display: none;
     }
   }
 }

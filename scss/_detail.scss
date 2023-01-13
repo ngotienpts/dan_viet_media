@@ -1,0 +1,133 @@
+.block-detail {
+  & .detail-public {
+    color: #a3aaa3;
+
+    & .detail-author {
+      color: #333;
+      &::after {
+        content: "\2758";
+        margin: 0 10px;
+        font-size: 12px;
+        color: #a3a3a3;
+      }
+    }
+    & i {
+      margin-right: 10px;
+    }
+  }
+
+  & .detail-sapo {
+    color: #6c6e70;
+  }
+
+  & .related-news {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    & .item {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 15px;
+      &:hover a {
+        color: #333;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 5px auto auto 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #008837;
+      }
+    }
+  }
+
+  & .detail-content {
+    & p {
+      font-size: 15px;
+      margin-bottom: 15px;
+      line-height: 26px;
+    }
+    & > h2,
+    & > h3,
+    & > h4,
+    & > h5,
+    & > h6 {
+      color: #1c1c1c;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 36px;
+      margin-bottom: 8px;
+    }
+    & figure figcaption {
+      display: block;
+      padding: 10px;
+      text-align: center;
+      font-family: "arial", sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #666;
+      background-color: #f2f2f2;
+      max-width: 100%;
+      line-height: 18px;
+      margin-bottom: 15px;
+    }
+
+    & figure figcaption .expEdit {
+      font-weight: normal;
+      margin: 0;
+    }
+    & figure figcaption em {
+      font-weight: normal;
+      font-style: italic;
+    }
+  }
+
+  & .detail-related {
+    margin-bottom: 15px;
+    border-radius: 3px;
+    border-top: 3px solid #007f74;
+    border-bottom: 3px solid #007f74;
+
+    & .box-articles__item {
+      display: flex;
+      padding: 10px 0;
+      border-bottom: 1px dotted #cbcfd3;
+    }
+    & .box-articles__img {
+      width: 20%;
+      flex-shrink: 0;
+    }
+    & .box-articles__content {
+      flex: 1;
+      margin-left: 15px;
+    }
+
+    & .box-articles__title {
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+  }
+
+  & .detail-tags {
+    margin: 30px 0;
+    align-items: baseline;
+
+    & .detail-tags__list {
+      flex-wrap: wrap;
+    }
+    & .detail-tags__item {
+      margin: 0 5px 15px 0;
+    }
+
+    & .tag-link {
+      color: #1c1c1c;
+      border: 1px solid #dedede;
+      border-radius: 4px;
+      padding: 6px;
+    }
+  }
+}

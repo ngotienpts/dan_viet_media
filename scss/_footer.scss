@@ -23,3 +23,37 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+
+.footer-pc {
+  & .footer-top {
+    color: #969696;
+    background-color: #1c1c1c;
+    padding: 30px 0;
+    & .footer-logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      & img {
+        height: 46px;
+        width: auto;
+      }
+    }
+
+    & .footer-item {
+      display: block;
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+
+    & .footer-cert {
+      width: 150px;
+      height: auto;
+    }
+  }
+
+  & .footer-bot {
+    padding: 15px 0;
+    background-color: #008837;
+  }
+}

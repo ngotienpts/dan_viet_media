@@ -34,57 +34,160 @@
     display: grid;
   }
 
-  /*-------------------------------------------------------------detail*/
-  .wrapper-detail {
-    margin-top: 56px;
-    padding: 20px;
-    border: none;
-    font-family: "Hind", sans-serif;
-  }
-  .wrapper-detail .block-left {
-    border-right: none;
+  /*-------------------------------------------------------------index*/
+  .mt-50 {
+    margin-top: 40px;
   }
 
-  .detail-field {
-    font-family: "Hind", sans-serif;
+  .header-top {
+    padding: 5px 0;
+  }
+  .header-top .header-top__list {
+    justify-content: center;
+  }
+
+  .header-logo {
+    padding: 10px 0;
+  }
+  .header-logo img {
+    height: 40px;
+    margin: auto;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    margin: 0 15px;
+  }
+  .navbar .navbar-item {
+    display: none;
+  }
+  .navbar .navbar-search {
+    margin-right: 0;
+    order: 2;
+  }
+  .navbar .navbar-search .navbar-search__icon {
+    font-size: 20px;
+  }
+  .navbar .navbar-expan {
+    margin: 10px 0;
+    background-color: #008837;
+  }
+  .navbar .navbar-expan .navbar-expan__icon {
+    line-height: 1;
+    padding: 5px;
+    font-size: 20px;
+    color: #fff;
+  }
+  .navbar .navbar-expan .expand-list {
+    right: auto;
+    left: 0;
     padding: 0;
+    padding-top: 10px;
+    transform-origin: left top;
+    background-color: #fff;
+    box-shadow: none;
   }
-  .detail-field .cate-header {
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    padding-bottom: 0;
-    border-bottom: none;
+  .navbar .navbar-expan .expand-item {
+    border-bottom: 1px solid #f1f1f1 !important;
   }
-  .detail-field .detail-title {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 0;
+  .navbar .navbar-expan .expand-item:first-child {
+    border-top: 1px solid #f1f1f1;
   }
-  .detail-field .detail-info {
-    margin: 0 0 20px;
-  }
-  .detail-field .detail-sapo {
-    font-size: 20px;
-    line-height: 30px;
-    text-align: justify;
-  }
-  .detail-field .detail-content p {
-    font-size: 20px;
-    margin-bottom: 24px;
-    line-height: 30px;
-    text-align: justify;
-  }
-  .detail-field .detail-content .author {
+  .navbar .navbar-expan .expan-link {
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 14px;
     color: #333;
-    font-size: 20px;
-    padding-bottom: 20px;
   }
-  .detail-field .detail-tags .tag-link {
-    color: #0000ff;
+
+  .block-main,
+.block-top,
+.block-top .block-small {
+    display: block;
   }
-  .detail-field .detail-tags .detail-tags__item {
-    margin: 0 5px 20px 0;
+
+  .block-top {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .block-top .block-large {
+    margin-bottom: 5px;
+  }
+  .block-top .block-small .block-articles__item {
+    margin-bottom: 5px;
+  }
+
+  .box-header .heading {
+    font-size: 11px;
+    padding: 9px 10px;
+  }
+
+  .box-primary {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .box-primary .box-container {
+    display: block;
+  }
+  .box-primary .box-item {
+    margin-bottom: 15px;
+  }
+
+  .box-secondary {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .box-secondary .box-item {
+    display: block;
+  }
+  .box-secondary .articles-img {
+    width: 100%;
+  }
+  .box-secondary .articles-content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .box-secondary .articles-title {
+    color: #1c1c1c;
+  }
+
+  .block-right {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .block-images .block-images__container {
+    display: block;
+  }
+  .block-images .block-large .article-cate {
+    display: inline-block;
+    background-color: #1c1c1c;
+  }
+  .block-images .block-small .article-img {
+    width: 35%;
+  }
+  .block-images .block-small .article-content {
+    margin-left: 16px;
+  }
+
+  .footer-pc .footer-top {
+    padding: 30px;
+  }
+  .footer-pc .footer-bot {
+    padding: 15px;
+  }
+  .footer-pc .footer-bot p:first-child {
+    text-align: center;
+  }
+
+  /*-------------------------------------------------------------cate*/
+  .breadcreums-cate {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .block-cate .block-right {
+    display: none;
   }
 }
 @media (max-width: 48em) {

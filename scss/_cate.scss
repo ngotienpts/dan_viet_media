@@ -1,0 +1,41 @@
+.block-cate {
+  & .block-left {
+    & .box-header {
+      border-color: #1c1c1c;
+    }
+    & .heading {
+      background-color: #1c1c1c;
+
+      &::before {
+        border-top: solid 10px #1c1c1c;
+      }
+    }
+
+    & .box-secondary {
+      & .box-item {
+        display: block;
+      }
+
+      & .articles-img {
+        width: 100%;
+      }
+
+      & .articles-content {
+        margin-left: 0;
+      }
+    }
+  }
+}
+.breadcreums-cate {
+  & .breadcrum-item {
+    color: #777;
+    &:first-child {
+      color: #008837;
+    }
+    & + .breadcrum-item::before {
+      content: "\276F";
+      font-size: 12px;
+      margin: 0 10px;
+    }
+  }
+}

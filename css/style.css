@@ -223,6 +223,10 @@ img {
 }
 
 /*===========================================================================*/
+.font-robo-rif {
+  font-family: "Roboto Serif", serif;
+}
+
 /*===========================================================================*/
 .fs-10 {
   font-size: 0.625rem;
@@ -1711,6 +1715,12 @@ img {
   margin: 30px 0;
   align-items: baseline;
 }
+.block-detail .detail-tags .detail-tags__title {
+  color: #fff;
+  background-color: #1c1c1c;
+  padding: 3px 6px;
+  text-transform: uppercase;
+}
 .block-detail .detail-tags .detail-tags__list {
   flex-wrap: wrap;
 }
@@ -1722,6 +1732,46 @@ img {
   border: 1px solid #dedede;
   border-radius: 4px;
   padding: 6px;
+}
+.block-detail .ads-news {
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+.block-detail .ads-news .ads-news__heading {
+  border-bottom: 1px solid #eee;
+}
+.block-detail .ads-news .article-title {
+  font-weight: bold;
+  margin-top: 10px;
+  line-height: 22px;
+  color: #202124;
+}
+.block-detail .box-action {
+  margin: 25px 0;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  border: 1px solid #dedede;
+}
+.block-detail .box-action .btn-cmt {
+  font-size: 12px;
+  color: #fff;
+  background-color: #8b9ba7;
+  margin-left: 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  line-height: 1;
+}
+.block-detail .box-action .btn-cmt i {
+  margin-right: 3px;
+  font-size: 10px;
+}
+.block-detail .box-action .btn-cmt .count {
+  display: inline-block;
+}
+.block-detail .box-action .btn-cmt .count::before {
+  content: "❘";
+  margin-right: 5px;
+  margin-left: 3px;
 }
 
 #back-top {

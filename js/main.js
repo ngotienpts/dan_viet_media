@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // navbar
   var navbar = document.querySelector(".navbar ");
 
+  // đề xuất
+  var suggest = document.querySelector(".block-suggest");
+
   const app = {
     // su ly cac su kien
     handleEvent: function () {
@@ -47,23 +50,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // color thief
     colorThief: function () {
-      // var caretakers =  document.querySelector('.article-caretaker')
-      // var pictureFrames =  document.querySelector('.js-picture-frame')
-      // var colorThief = new ColorThief();
-      // var img = document.getElementById('imag');
-      // // check if img is loaded
-      // if (img && img.naturalWidth) {
-      //   onImageLoad();
-      // } else {
-      //   img.onload = function() {
-      //     onImageLoad();
-      //   };
-      // }
-      // function onImageLoad() {
-      //   URL.revokeObjectURL(image.src);
-      //   var rgb = colorThief.getColor(img);
-      //   document.body.style.backgroundColor = 'rgb(' + rgb.join(', ') + ')';
-      // }
+      if (suggest) {
+        var pictureFrames = suggest.querySelectorAll(".js-picture-frame");
+        pictureFrames.forEach((pictureFrame) => {
+          var parent = pictureFrame.parentElement.parentElement;
+          var caretaker = parent.querySelector(".article-caretaker");
+          var content = parent.querySelector(".article-content");
+          var coating = parent.querySelector(".coating-secondary");
+          var img = new Image();
+          let srcImg = `${pictureFrame.src}`;
+
+          img.onload = function () {
+            var colorThief = new ColorThief();
+            var color = colorThief.getColor(img);
+
+            caretaker.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+            coating.onmouseover = function () {
+              this.style.background = `rgba(${color[0]}, ${color[1]}, ${color[2]},0.5)`;
+            };
+
+            coating.onmouseout = function () {
+              this.style.background = `transparent`;
+            };
+
+            if (content.closest(".box-priamry")) {
+              content.style.background = `linear-gradient(to right, transparent, rgba(${color[0]}, ${color[1]}, ${color[2]},0) 4%, rgba(${color[0]}, ${color[1]}, ${color[2]},0.5) 8%, rgb(${color[0]}, ${color[1]}, ${color[2]}) 12%)`;
+            } else if (content.closest(".box-secondary")) {
+              content.style.background = `linear-gradient(transparent, rgba(${color[0]}, ${color[1]}, ${color[2]},0) 4%, rgba(${color[0]}, ${color[1]}, ${color[2]},0.5) 8%, rgb(${color[0]}, ${color[1]}, ${color[2]}) 12%)`;
+            } else {
+              content.style.background = `linear-gradient(to left, transparent, rgba(${color[0]}, ${color[1]}, ${color[2]},0) 4%, rgba(${color[0]}, ${color[1]}, ${color[2]},0.5) 8%, rgb(${color[0]}, ${color[1]}, ${color[2]}) 12%)`;
+            }
+          };
+
+          img.crossOrigin = "Anonymous";
+          img.src = srcImg;
+        });
+      }
     },
 
     // sticky bar home 1
@@ -72,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         additionalMarginTop: 60,
       });
     },
+
     // fancybox
     fancybox: function () {
       if (fancyboxes) {
@@ -113,6 +136,8 @@ document.addEventListener("DOMContentLoaded", function () {
       this.stickyHome1();
       // fancybox
       this.fancybox();
+      // color thief
+      this.colorThief();
     },
   };
 
